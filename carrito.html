@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Turismo Urbe - Explora destinos nacionales e internacionales con un estilo moderno y minimalista." />
+    <meta name="keywords" content="turismo, viajes, destinos, vacaciones, Huatulco, Italia, París, paquetes de viaje" />
+    <meta name="author" content="Turismo Urbe" />
+    <title>Carrito | Turismo Urbe</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header class="header">
+        
+        <nav class="navbar">
+            <div class="navbar-container">
+                <a href="index.html" class="navbar-logo"><img src="/img/turismo-urbe-logo.png" alt="logo de turismo urbe"></a>
+                <button class="navbar-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="navbar-menu">
+                    <li><a href="#inicio" class="active">Inicio</a></li>
+                    <li><a href="#destinos">Destinos</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+                <div class="cart-icon" onclick="location.href='carrito.html'">
+                    🛒 <span id="cart-count">0</span>
+                </div>
+                <div>
+                    <button id="themeToggle">🌙</button>
+                </div>
+        </nav>
+    </header>
+
+    <main class="cart-page">
+        <h1>Tu carrito de compras</h1>
+
+        <div id="cart-page-items"></div>
+
+        <div class="cart-summary">
+            <p>Total: $<span id="cart-page-total">0</span>MXN</p>
+            <button class="btn-checkout">Proceder al pago</button>
+            <button class="btn-clear" onclick="vaciarCarrito()">Vaciar carrito</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Turismo Urbe | Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="/js/scripts.js"></script>
+    
+
+    
+</body>
+</html>

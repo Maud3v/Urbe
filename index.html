@@ -4,16 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Turismo Urbe - Explora destinos nacionales e internacionales con un estilo moderno y minimalista." />
+    <meta name="keywords" content="turismo, viajes, destinos, vacaciones, Huatulco, Italia, París, paquetes de viaje" />
+    <meta name="author" content="Turismo Urbe" />
     <title>Turismo Urbe</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
     <header class="header">
-        <!-- <div class="logo">
-            <img src="/img/turismo-urbe-logo.png" alt="logo de turismo urbe">
-        </div> -->
-
+        
         <nav class="navbar">
             <div class="navbar-container">
                 <a href="index.html" class="navbar-logo"><img src="/img/turismo-urbe-logo.png" alt="logo de turismo urbe"></a>
@@ -30,9 +29,13 @@
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </div>
-            <button id="themeToggle">🌙</button>
+                <div class="cart-icon" onclick="abrirCarrito()">
+                    🛒 <span id="cart-count">0</span>
+                </div>
+                <div>
+                    <button id="themeToggle">🌙</button>
+                </div>
         </nav>
-
     </header>
 
     <main>
@@ -51,34 +54,72 @@
         <section id="destinos" class="destinos">
             <h2>Destinos destacados</h2>
             <div class="grid">
-                <article class="card">Huatulco Secrets 2026
+                <article class="card">
                     <img src="/img/huatulco-s-banner.jpg" alt="">
+                    <h3>Huatulco Secrets 2026 Jr Suite Ocean View</h3>
+                    <p>Del 13 al 15 de Febrero de 2026 Plan todo incluido & Jr Suite Ocean View</p>
+                    <p><b>$17,162 MXN</b></p>
+                    <button class="btn" onclick="agregarAlCarrito(1)">Comprar</button>
                 </article>
-                <article class="card">Huatulco Dreams 2026
+                <article class="card">
                     <img src="/img/huatulco-d-banner.jpg" alt="">
+                    <h3>Huatulco Dreams 2026 Deluxe King</h3>
+                    <p>Del 13 al 15 de Febrero de 2026 Plan todo incluido & Deluxe King</p>
+                    <p><b>$14,660 MXN</b></p>
+                    <button class="btn" onclick="agregarAlCarrito(2)">Comprar</button>
                 </article>
-                <article class="card">Huatulco Nirú 2026
+                <article class="card">
+                    <img src="/img/huatulco-secrets-junio.jpg" alt="">
+                    <h3>Huatulco Secrets 2026 Jr Suite</h3>
+                    <p>Cualquier fin de semana de Junio Plan todo incluido & Jr Suite</p>
+                    <p><b>$11,126 MXN</b></p>
+                    <button class="btn" onclick="agregarAlCarrito(3)">Comprar</button>
+                </article>
+                <article class="card">
+                    <img src="/img/huatulco-dreams-marzo.jpg" alt="Huatulco Dreams Marzo">
+                    <h3>Huatulco Dreams 2026 Doble Deluxe</h3>
+                    <p>Del 20 al 22 de Marzo de 2016 Plan todo incluido & Doble Deluxe</p>
+                    <p><b>$7,950 MXN</b></p>
+                    <button class="btn" onclick="agregarAlCarrito(4)">Comprar</button>
+                </article>
+                <article class="card">
+                    <img src="/img/hotel-xcaret-all.jpg" alt="">
+                    <h3>Hotel Xcaret México All Fun Inclusive/All Parks 2026</h3>
+                    <p>Incluye 2 adultos y 2 menores (-17 años) Del 30 de Abril al 3 de Mayo (4 días y 3 noches)</p>
+                    <p><b>$51,803 MXN</b></p>
+                    <button class="btn" onclick="agregarAlCarrito(5)">Comprar</button>
+                </article>
+                <article class="card">
                     <img src="/img/huatulco-niru.jpg" alt="">
+                    <h3>Huatulco Nirú 2026 Ocean View</h3>
+                    <p>Del 13 al 15 de Febrero de 2026 Plan todo incluido & Standard Deluxe</p>
+                    <p><b>$11,446 MXN</b></p>
+                    <button class="btn" onclick="agregarAlCarrito(6)">Comprar</button>
                 </article>
-                <article class="card">Verano en Italia & París 2026
+                <article class="card">
                     <img src="/img/italy-paris-26.jpg" alt="">
+                    <h3>Verano en Italia & París 2026 con Disneyland</h3>
+                    <p>Paquete de verano en Italia y París, salidas grupales garantizadas 2026: 18, 22 y 31 de Julio / 5 de Agosto</p>
+                    <p><b>$51,900 MXN</b></p>
+                    <button class="btn" onclick="agregarAlCarrito(7)">Comprar</button>
                 </article>
             </div>
         </section>
 
         <section id="servicios" class="servicios">
-        <h2>Servicios</h2>
-        <ul>
-            <li>Paquetes de viajes nacionales e internacionales</li>
-            <li>Vuelos y hospedaje</li>
-            <li>Asesoría de viaje - Trámites migratorios</li>
-        </ul>
+            <h2>Servicios</h2>
+            <ul>
+                <li>Paquetes de viajes nacionales e internacionales</li>
+                <li>Vuelos y hospedaje</li>
+                <li>Asesoría de viaje - Trámites migratorios</li>
+            </ul>
         </section>
 
         <section id="blog" class="blog">
-        <h2>Blog de experiencias</h2>
-        <article>Consejos para tu primer viaje internacional</article>
-        <article>Los 5 destinos más visitados en México</article>
+            <h2>Blog de experiencias</h2>
+            <article>Consejos para tu primer viaje internacional</article>
+            <article>Cómo empacar ligero para tus vacaciones</article>
+            <article>Los 5 destinos más visitados en México</article>
         </section>
 
         <section id="contacto" class="contacto">
@@ -96,6 +137,21 @@
         <p>© 2025 Turismo Urbe | Todos los derechos reservados.</p>
     </footer>
 
+    <!-- === MODAL CARRITO === -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <span class="close-cart" onclick="cerrarCarrito()">X</span>
+
+            <h2>Tu carrito</h2>
+
+            <div id="cart-items"></div>
+            <p class="cart-total">
+                Total: $<span id="cart-total">0</span> MXN
+            </p>
+
+            <button class="btn-checkout">Proceder con el pago</button>
+        </div>
+    </div>
     <script src="js/scripts.js"></script>
 </body>
 </html>
